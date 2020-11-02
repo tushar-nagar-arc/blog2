@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% block content %}
+    {% for post in posts %}
+      <div class="">
+        <h1><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></h1>
+        <p>{{ post.body }}</p>
+
+      </div>
+    {% endfor %}
+    {% endblock content %}
+  </body>
+</html>
